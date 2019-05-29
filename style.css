@@ -1,0 +1,252 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.ml15 {
+    font-weight: 200;
+    font-size: 2.8em;
+    text-transform:uppercase;
+    letter-spacing: 0.5em;
+   
+    
+    
+  }
+  
+  .ml15 .word {
+    display: inline-block;
+    line-height: 1em;
+    margin-left: 40%;
+  }
+
+  hr{
+      border:2px solid black
+      
+  }
+  html{
+      overflow-x:  hidden;
+  }
+  
+ /* div{
+      border: 2px solid black;
+      margin : 30px;*/
+
+      
+.center{
+
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform : translate(-50%,-50%);
+
+}
+
+p{
+    position: relative;
+    text-decoration:  none;
+    width: 800px;
+    height: 400px;
+    text-align: center;
+    line-height: 50px;
+    display: inline-block;
+    font-size:24px;
+    color: white;
+    margin-top: 20%;
+    margin-bottom: 7%;
+    
+}
+
+p:before{
+    content: '';
+    position: absolute;
+    top:-2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+border: 2px solid transparent;
+background: transparent;
+}
+
+ p:before {
+
+    animation: animate 1s linear forwards;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+ }
+ @keyframes animate
+ {
+     0%
+     {
+        width: 0;
+        height: 0;
+        border-top-color : black;
+        border-right-color :transparent;
+        border-bottom-color :transparent;
+        border-left-color :transparent;
+     }
+     50%
+     {
+        width: 100%;
+        height: 0;
+        border-top-color :black;
+        border-right-color : black;
+        border-bottom-color :transparent;
+        border-left-color :transparent;
+     }
+     100%
+     {
+        width:100%;
+        height: 100%;
+        border-top-color: black;
+        border-right-color : black;
+        border-bottom-color :transparent;
+        border-left-color :transparent;
+     }
+     
+ }
+
+ p:after{
+    content: '';
+    position: absolute;
+    top:-2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+border: 2px solid transparent;
+background:transparent;
+
+}
+ p:after{
+
+    animation: animate2 1s linear forwards;
+    animation-delay: 0s;
+    transition-duration: 1s;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    
+    
+
+ }
+   @keyframes animate2
+ {
+     0%
+     {
+        width: 0;
+        height: 0;
+        border-top-color : transparent;
+        border-right-color :transparent;
+        border-bottom-color :transparent;
+        border-left-color :black;
+     }
+     50%
+     {
+        width: 0;
+        height: 100%;
+        border-top-color :transparent;
+        border-right-color : transparent;
+        border-bottom-color :black;
+        border-left-color :black;
+     }
+     100%
+     {
+        width:100%;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color : transparent;
+        border-bottom-color :black;
+        border-left-color :black;
+     }
+    }
+     
+    p:before{
+        content: '';
+        position: absolute;
+        top:-2px;
+        left: -2px;
+        width: 0;
+        height: 0;
+    border: 2px solid transparent;
+    background: transparent;
+    }
+    
+     p:before {
+    
+        animation: animate 1s linear forwards;
+        animation-delay: 0.5s;
+        animation-duration: 2s;
+     }
+
+     p:hover:after{
+        content: 'Bye Bye';
+        position: absolute;
+        top:-2px;
+        left: -2px;
+        width: 0;
+        height: 0;
+    border: 2px solid transparent;
+    background:black;
+    
+    }
+     p:hover:after{
+    
+        animation: animate2 1s linear forwards;
+        animation-delay: 0s;
+        transition-duration: 1s;
+        animation-delay: 0.5s;
+        animation-duration: 2s;
+
+        
+        
+    
+     }
+
+
+ 
+  video {
+    position: fixed;
+    top:50%;
+    left:50%;
+    min-width: 100%;
+    min-height: 100%;
+    width:  auto;
+    height:  auto;
+    z-index: -100;
+    transform : translateX(-50%) translateY(-50%);
+    background: url('sof1.jpg') no-repeat;
+    
+ 
+ }
+ header{
+     background-color: beige;
+     z-index: -1;
+     opacity: 0.4
+ }
+ 
+
+
+
+ .animated{
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: black }
+    50% { border-color: orange }
+  }
